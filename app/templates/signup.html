@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main%}
+
+<div class="container">
+	<form action = "{{url_for('signup')}}"" method = "POST" enctype="multipart/form-data">
+	{{form.csrf_token}}
+	{{form.fname.label}}
+	{{form.fname}}
+	{{form.lname.label}}
+	{{form.lname}}
+	{{form.age.label}}
+	{{form.age}}
+	{{form.biography.label}}
+	{{form.biography}}
+	{{form.sex.label}}
+	{{form.sex}}
+	Upload profile picture
+	<input type="file" name="file">
+		<button type="submit" name ="Register">Register</button>
+	</form>
+</div>
+{% endblock%}
