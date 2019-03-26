@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{% include 'flash.html' %}
+
+{% for user in users %}     
+         <div class="img-layout">
+         
+             <ul>
+                    <img src="{{ url_for('static', filename='uploads/' + user.img ) }}"></img>
+             </ul>
+             
+         </div>
+
+ 
+          <div class="user-control">
+          
+               {{ user.firstname }} 
+               {{ user.lastname }}</br>
+               <i class="fa fa-user-o"></i> {{ user.gender }}</br>
+               <i class="fa fa-map-marker"></i> {{ user.location }}</br>
+          </div>
+
+{% endfor %}
+
+{% endblock %}

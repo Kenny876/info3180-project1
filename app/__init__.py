@@ -18,3 +18,4 @@ login_manager.init_app(app)
 
 app.config.from_object(__name__)
 from app import views
+
